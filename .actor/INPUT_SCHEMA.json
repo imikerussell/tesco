@@ -1,0 +1,57 @@
+{
+  "title": "Tesco Grocery Scraper",
+  "description": "Scrape product data from Tesco.com by providing search keywords, URLs, or product IDs.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "queries": {
+      "title": "Queries",
+      "type": "array",
+      "description": "Enter search keywords, product/category URLs, or product IDs (e.g., '303837409' for info, '303837409/reviews' for reviews).",
+      "editor": "stringList",
+      "prefill": ["bread", "https://www.tesco.com/groceries/en-GB/products/303837409"],
+      "example": [
+        "milk",
+        "https://www.tesco.com/groceries/en-GB/shop/fresh-food/all",
+        "303837409",
+        "303837409/reviews"
+      ]
+    },
+    "region": {
+      "title": "Region",
+      "type": "string",
+      "description": "Select the region to scrape from.",
+      "enum": ["UK", "IE"],
+      "enumTitles": ["United Kingdom", "Ireland"],
+      "default": "UK"
+    },
+    "maxItems": {
+      "title": "Maximum Items",
+      "type": "integer",
+      "description": "The maximum number of products to scrape per query. Leave empty to scrape all available products.",
+      "minimum": 1,
+      "maximum": 10000,
+      "unit": "products"
+    },
+    "includeProductDetails": {
+      "title": "Include Full Product Details",
+      "type": "boolean",
+      "description": "If enabled, the scraper will fetch detailed information for each product found in a category or search. Slower but more comprehensive.",
+      "default": false
+    },
+    "includeReviews": {
+      "title": "Include Product Reviews",
+      "type": "boolean",
+      "description": "If enabled, the scraper will fetch customer reviews for each product. Only works when includeProductDetails is true.",
+      "default": false
+    },
+    "proxyConfiguration": {
+      "title": "Proxy Configuration",
+      "type": "object",
+      "description": "Select proxies to be used by your crawler.",
+      "prefill": { "useApifyProxy": true },
+      "editor": "proxy"
+    }
+  },
+  "required": ["queries", "region"]
+}

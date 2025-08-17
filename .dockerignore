@@ -1,0 +1,35 @@
+# Dependencies
+node_modules
+npm-debug.log
+
+# Apify storage
+apify_storage
+storage
+
+# IDE
+.idea
+.vscode
+
+# Git
+.git
+.gitignore
+
+# Docs
+README.md
+CHANGELOG.md
+
+# Development files
+*.log
+.env
+.env.local
+.DS_Store
+
+# Test files
+test
+tests
+*.test.js
+*.spec.js
+
+# Build files
+dist
+build

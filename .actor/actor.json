@@ -1,0 +1,55 @@
+{
+    "actorSpecification": 1,
+    "name": "tesco-scraper",
+    "version": "1.0.0",
+    "buildTag": "latest",
+    "env": null,
+    "dockerfile": "./Dockerfile",
+    "readme": "./README.md",
+    "input": "./INPUT_SCHEMA.json",
+    "storages": {
+        "dataset": {
+            "actorSpecification": 1,
+            "title": "Tesco Products",
+            "views": {
+                "products": {
+                    "title": "Products",
+                    "transformation": {
+                        "fields": [
+                            "id",
+                            "title",
+                            "brand",
+                            "price",
+                            "pricePerUnit",
+                            "availability",
+                            "imageUrl",
+                            "productUrl",
+                            "description",
+                            "ingredients",
+                            "nutrition",
+                            "gtin",
+                            "tpnb",
+                            "manufacturer"
+                        ]
+                    },
+                    "display": {
+                        "component": "table",
+                        "properties": {
+                            "id": {
+                                "label": "Product ID"
+                            },
+                            "title": {
+                                "label": "Product Name",
+                                "format": "text"
+                            },
+                            "price": {
+                                "label": "Price",
+                                "format": "number"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "name": "tesco-scraper",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "High-performance Tesco grocery scraper using internal GraphQL API",
+    "main": "src/main.js",
+    "scripts": {
+        "start": "node src/main.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postinstall": "npm install apify crawlee got-scraping"
+    },
+    "author": "Your Name",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "apify": "^3.1.0",
+        "crawlee": "^3.5.0",
+        "got-scraping": "^3.2.15"
+    },
+    "devDependencies": {
+        "@apify/tsconfig": "^0.1.0",
+        "eslint": "^8.50.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.28.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/tesco-scraper"
+    },
+    "keywords": [
+        "tesco",
+        "scraper",
+        "apify",
+        "crawlee",
+        "grocery",
+        "web-scraping",
+        "graphql"
+    ]
+}
